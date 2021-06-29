@@ -31,7 +31,12 @@ class ListViewBuilder extends StatelessWidget {
           itemCount: words.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-                leading: Icon(Icons.ac_unit), title: Text(words[index]));
+              leading: Icon(Icons.ac_unit),
+              title: Text(words[index]),
+              onTap: () {
+                print("aaaddd");
+              },
+            );
           }),
     );
   }

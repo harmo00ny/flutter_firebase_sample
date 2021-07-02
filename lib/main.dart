@@ -1,43 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_sample/second_route.dart';
+import 'package:flutter_firebase_sample/third_route.dart';
 
-void main() => runApp(MyApp());
+import 'home_route.dart';
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "ListView.builder",
-      theme: new ThemeData(primarySwatch: Colors.green),
-      debugShowCheckedModeBanner: false,
-      home: new ListViewBuilder(),
-    );
-  }
-}
-
-class ListViewBuilder extends StatelessWidget {
-  final List<String> words = [
-    'sky',
-    'cloud',
-    'tent',
-    'tree',
-    'falcon',
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("ListView.builder")),
-      body: ListView.builder(
-          itemCount: words.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              leading: Icon(Icons.ac_unit),
-              title: Text(words[index]),
-              onTap: () {
-                print("aaaddd");
-              },
-            );
-          }),
-    );
-  }
+void main() {
+  runApp(MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/': (context) => HomeRoute(),
+      '/second': (context) => SecondRoute(),
+      '/third': (context) => ThirdRoute(),
+    },
+  ));
 }

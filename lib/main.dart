@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_sample/second_route.dart';
 
-import 'first_screen.dart';
+import 'home_screen.dart';
 
 void main() {
   runApp(
@@ -12,7 +12,7 @@ void main() {
       initialRoute: '/',
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => FirstScreen(),
+        '/': (context) => HomeScreen(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/second': (context) => SecondScreen(),
       },

@@ -6,7 +6,7 @@ import 'home_screen.dart';
 void main() {
   runApp(
     MaterialApp(
-      title: 'Named Routes Demo',
+      title: 'Flutter Sample',
       // Start the app with the "/" named route. In this case, the app starts
       // on the FirstScreen widget.
       initialRoute: '/',
